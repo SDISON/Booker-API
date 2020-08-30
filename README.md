@@ -84,17 +84,17 @@ We have written a cron-job using the django-cron to run a function to check all 
 
 ## Api Links
 
-1. [http://127.0.0.1:8000/api/CreateTicket/]() - <POST>
+1. [http://127.0.0.1:8000/api/CreateTicket/]() - POST
    
-2. [http://127.0.0.1:8000/api/UpdateTime/(?P<pk>[0-9]+)]() - <PUT>
+2. [http://127.0.0.1:8000/api/UpdateTime/(?P<pk>[0-9]+)]() - PUT
 
-3. [http://127.0.0.1:8000/api/ViewByTime/]() - <POST>
+3. [http://127.0.0.1:8000/api/ViewByTime/]() - POST
 
-4. [http://127.0.0.1:8000/api/DeleteTicket/(?P<pk>[0-9]+)]() - <DELETE>
+4. [http://127.0.0.1:8000/api/DeleteTicket/(?P<pk>[0-9]+)]() - DELETE
 
-5. [http://127.0.0.1:8000/api/ViewTicket/(?P<pk>[0-9]+)]() - <GET>
+5. [http://127.0.0.1:8000/api/ViewTicket/(?P<pk>[0-9]+)]() - GET
 
-6. [http://127.0.0.1:8000/api/MarkExpire/(?P<pk>[0-9]+)]() - <PUT>
+6. [http://127.0.0.1:8000/api/MarkExpire/(?P<pk>[0-9]+)]() - PUT
 
 ## Installation
 
