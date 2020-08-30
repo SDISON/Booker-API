@@ -16,32 +16,32 @@ Features of the api:
 ## Preview
 
 1. Booking a ticket using name, phone, time and date.
-![Create Ticket]()
+![Create Ticket](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/CreateTicket.png)
 
 2. Update the registered ticket time.
-![Update Time]()
+![Update Time](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/UpdateTime.png)
 
 3. View all tickets of a particular time.
 
 * Using old time used in registered.
-![View ByTime-old]()
+![View ByTime-old](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/ViewByTime-OLD.png)
 
 * Using the updated time.
-![View ByTime-new]()
+![View ByTime-new](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/ViewByTime-Update.png)
 
 4. Delete a ticket using ticket id.
-![Delete Ticket]()
+![Delete Ticket](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/DeleteTicket-1.png)
 
 5. View a ticket from ticket id.
 
 * Before delete
-![View Ticket]()
+![View Ticket](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/ViewTicket.png)
 
 * After delete.
-![View Ticket-del]()
+![View Ticket-del](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/ViewTicket-DEL.png)
 
 6. Mark a ticket expire.
-![Mark Expire]()
+![Mark Expire](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/Mark-Expire.png)
 
 7. Delete all expire ticket using cron-job.
 
