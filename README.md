@@ -52,6 +52,8 @@ This project is divided into 2 parts:
 2. API app - Contains all api functions to interact with the user.
 
 ### Ticket Table:
+
+![Ticket-model](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/Ticket_model.png)
     
 Model a Ticket table to store the user information like name, date, phone and time. We need to have a unique ticket-id so we indexed our database on this to query efficiently.\
 As, we have unique id of object, we use it in this formula to get the ticket-id for the ticket.
@@ -67,7 +69,9 @@ The queries effectively outputted using this are:
 
 ### Time-Based Table:
 
-This model table is used to store the slots and the ticket-id registered for that slot.\
+![TimeBased-model](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/Time_basedmodel.png)
+
+This model table is used to store the slots(time_id) and the ticket-id registered for that slot(json_id).\
 As, we know to output query like tickets of a particular time we need to search the whole database but to optimized this query, we need to generate this slot table.
 
 ##### Features of Slot Table:
@@ -82,19 +86,20 @@ So, for a given time we just generate the slot-id and output all the tickets fas
 
 We have written a cron-job using the django-cron to run a function to check all the tickets whether they are expired or not is yes then it delete all these type of tickets from the database. Our cron-job runs every 1 hour to check the entries in the databse.
 
+![cron](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/cron.png)
+
+![cron-delete](https://raw.githubusercontent.com/SDISON/Booker-API/master/images/cron-delete.png)
+
 ## Api Links
 
-1. [http://127.0.0.1:8000/api/CreateTicket/]() - POST
-   
-2. [http://127.0.0.1:8000/api/UpdateTime/(?P<pk>[0-9]+)]() - PUT
-
-3. [http://127.0.0.1:8000/api/ViewByTime/]() - POST
-
-4. [http://127.0.0.1:8000/api/DeleteTicket/(?P<pk>[0-9]+)]() - DELETE
-
-5. [http://127.0.0.1:8000/api/ViewTicket/(?P<pk>[0-9]+)]() - GET
-
-6. [http://127.0.0.1:8000/api/MarkExpire/(?P<pk>[0-9]+)]() - PUT
+| Index  | Link  | Method  |
+|-------|---------------|-------|
+|1|[http://127.0.0.1:8000/api/CreateTicket/]() | POST|
+|2|[http://127.0.0.1:8000/api/UpdateTime/(?P<pk>[0-9]+)]() | PUT|
+|3|[http://127.0.0.1:8000/api/ViewByTime/]() | POST|
+|4| [http://127.0.0.1:8000/api/DeleteTicket/(?P<pk>[0-9]+)]() |DELETE|
+|5| [http://127.0.0.1:8000/api/ViewTicket/(?P<pk>[0-9]+)]() | GET|
+|6| [http://127.0.0.1:8000/api/MarkExpire/(?P<pk>[0-9]+)]() |PUT|
 
 ## Installation
 
@@ -109,7 +114,7 @@ python3 manage.py runserver
 ```
 To use the cron-job move to the etc/crontab and add a line at the end.
 ```
- */1 *	* * *	root    source <path-to-bashrc>-
+ 0 *	* * *	root    source <path-to-.bashrc>-
  && source <path-to-virtual-environment>-
  && python <path-to-manage.py> runcrons
 ```
